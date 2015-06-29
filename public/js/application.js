@@ -1,7 +1,19 @@
 $(document).ready(function() {
-	// Este código corre después de que `document` fue cargado(loaded) 
-	// completamente. 
-	// Esto garantiza que si amarramos(bind) una función a un elemento 
-	// de HTML este exista ya en la página. 
+	// var elem = "" + updatePlayerPosition('player_1') + " .active";
+	// console.log(elem);
+	// $(elem).css("background-color", "green");
+	$("#racer").on("click", function(){
+		updatePlayerPosition('player_1');
+	});
 
+
+
+	// updatePlayerPosition('player_1');
 });
+
+var updatePlayerPosition = function(player){
+	console.log(this);
+	var element = $("#" + player + " .active");
+	$(element).removeClass("active");
+	$(element).next().addClass("active");
+}
