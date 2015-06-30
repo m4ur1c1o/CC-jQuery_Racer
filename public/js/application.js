@@ -1,8 +1,4 @@
 $(document).ready(function() {
-	// $("#racer").on("click", function(){
-	// 	updatePlayerPosition('player_1');
-	// });
-	
 	$("#start").on("click", function(){
 		resetPlayerPosition('player_1');
 		resetPlayerPosition('player_2');
